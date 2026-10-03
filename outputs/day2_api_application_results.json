@@ -1,0 +1,53 @@
+{
+  "conversation_history_demo": [
+    {
+      "user": "My project is a drone-based disaster response system called AeroSentinel.",
+      "assistant": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"My project is a drone-based disaster response system called AeroSentinel.\""
+    },
+    {
+      "user": "What's one technical risk I should plan for?",
+      "assistant": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"What's one technical risk I should plan for?\""
+    },
+    {
+      "user": "Summarize what we've discussed so far in one sentence.",
+      "assistant": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Summarize what we've discussed so far in one sentence.\""
+    }
+  ],
+  "streaming_demo_output": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"List three benefits of using drones for disaster response, briefly.\" ",
+  "structured_output_demo": {
+    "parse_ok": false,
+    "parsed": null
+  },
+  "error_handling_demo": {
+    "status_code": 401,
+    "message": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CfepEgeaQbPXh9BfaL8Ei'}"
+  },
+  "usage_summary": {
+    "total_input_tokens": 71,
+    "total_output_tokens": 140,
+    "total_tokens": 211,
+    "estimated_cost_usd": 0.002313,
+    "calls": [
+      {
+        "label": "conversation_turn",
+        "input_tokens": 10,
+        "output_tokens": 35
+      },
+      {
+        "label": "conversation_turn",
+        "input_tokens": 8,
+        "output_tokens": 33
+      },
+      {
+        "label": "conversation_turn",
+        "input_tokens": 9,
+        "output_tokens": 34
+      },
+      {
+        "label": "structured_extract",
+        "input_tokens": 44,
+        "output_tokens": 38
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "concepts_covered": [
+    "Generative AI",
+    "Generative AI vs traditional ML",
+    "LLM (Large Language Model)",
+    "Tokens / Tokenization",
+    "Context window",
+    "Parameters",
+    "Inference",
+    "Temperature",
+    "System/user/assistant messages"
+  ],
+  "prompting_techniques": {
+    "zero_shot": {
+      "prompt": "Classify the sentiment of this review and explain why in one sentence.\n\nReview: \"The battery dies by noon even with light use, but the camera is excellent.\"",
+      "output": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Classify the sentiment of this review and explain why in one sentence.\n\nReview: ...\"",
+      "mode": "demo",
+      "input_tokens": 27,
+      "output_tokens": 39
+    },
+    "few_shot": {
+      "prompt": "Classify the sentiment of this review and explain why in one sentence.\n\nReview: \"Fast shipping, but the box arrived crushed.\"\nSentiment: Mixed \u2014 positive on logistics, negative on packaging.\n\nReview: \"Absolutely love it, works perfectly every day.\"\nSentiment: Positive \u2014 consistent satisfaction, no complaints.\n\nReview: \"The battery dies by noon even with light use, but the camera is excellent.\"\nSentiment:",
+      "output": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Classify the sentiment of this review and explain why in one sentence.\n\nReview: ...\"",
+      "mode": "demo",
+      "input_tokens": 60,
+      "output_tokens": 39
+    },
+    "role_based": {
+      "prompt": "You are a senior product analyst who writes concise, balanced verdicts for an internal weekly report. Classify the sentiment of this review and explain why in one sentence.\n\nReview: \"The battery dies by noon even with light use, but the camera is excellent.\"",
+      "output": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"You are a senior product analyst who writes concise, balanced verdicts for an in...\"",
+      "mode": "demo",
+      "input_tokens": 43,
+      "output_tokens": 39
+    }
+  },
+  "temperature_comparison": {
+    "0.0": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Suggest a one-line tagline for a drone-based disaster response startup.\"",
+    "0.7": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Suggest a one-line tagline for a drone-based disaster response startup.\"",
+    "1.3": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Suggest a one-line tagline for a drone-based disaster response startup.\""
+  },
+  "usage_summary": {
+    "total_input_tokens": 160,
+    "total_output_tokens": 222,
+    "total_tokens": 382,
+    "estimated_cost_usd": 0.00381,
+    "calls": [
+      {
+        "label": "zero_shot",
+        "input_tokens": 27,
+        "output_tokens": 39
+      },
+      {
+        "label": "few_shot",
+        "input_tokens": 60,
+        "output_tokens": 39
+      },
+      {
+        "label": "role_based",
+        "input_tokens": 43,
+        "output_tokens": 39
+      },
+      {
+        "label": "temperature_0.0",
+        "input_tokens": 10,
+        "output_tokens": 35
+      },
+      {
+        "label": "temperature_0.7",
+        "input_tokens": 10,
+        "output_tokens": 35
+      },
+      {
+        "label": "temperature_1.3",
+        "input_tokens": 10,
+        "output_tokens": 35
+      }
+    ]
+  }
+}

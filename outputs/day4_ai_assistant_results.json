@@ -1,0 +1,72 @@
+{
+  "classification": [
+    {
+      "ticket": "I was charged twice for my subscription this month.",
+      "predicted_category": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"You are classifying support tickets into exactly one category.\nCategories: Billi...\""
+    },
+    {
+      "ticket": "The app crashes every time I try to export a report.",
+      "predicted_category": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"You are classifying support tickets into exactly one category.\nCategories: Billi...\""
+    },
+    {
+      "ticket": "Could you add dark mode to the dashboard?",
+      "predicted_category": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"You are classifying support tickets into exactly one category.\nCategories: Billi...\""
+    }
+  ],
+  "extraction": {
+    "text": "Please ship the replacement part to Ayesha Khan at 42 Mall Road, Lahore by next Thursday. Order reference ORD-7731.",
+    "parse_ok": false,
+    "extracted": null
+  },
+  "summarization": {
+    "text": "AeroSentinel is a proposed drone system for disaster response in Pakistan. It would use thermal cameras to locate survivors after floods and deliver small medical supply packages to areas cut off by road damage. The team is currently at the concept and proposal stage, with no hardware built yet.",
+    "summary": "[DEMO MODE RESPONSE] This is a placeholder answer generated locally because no ANTHROPIC_API_KEY was found. In live mode, this would be Claude's real answer to: \"Summarize the text below in 1 sentence(s) or fewer.\nStay strictly grounded in th...\""
+  },
+  "tool_calling_demo": {
+    "available_tools": [
+      "get_weather",
+      "convert_currency"
+    ],
+    "user_request": "What's the weather like in Islamabad right now?",
+    "simulated_tool_call": {
+      "tool": "get_weather",
+      "args": {
+        "city": "Islamabad"
+      }
+    },
+    "tool_result": "[MOCK] It's 29\u00b0C and clear in Islamabad."
+  },
+  "usage_summary": {
+    "total_input_tokens": 269,
+    "total_output_tokens": 187,
+    "total_tokens": 456,
+    "estimated_cost_usd": 0.003612,
+    "calls": [
+      {
+        "label": "classification",
+        "input_tokens": 35,
+        "output_tokens": 36
+      },
+      {
+        "label": "classification",
+        "input_tokens": 37,
+        "output_tokens": 36
+      },
+      {
+        "label": "classification",
+        "input_tokens": 34,
+        "output_tokens": 36
+      },
+      {
+        "label": "extraction",
+        "input_tokens": 89,
+        "output_tokens": 40
+      },
+      {
+        "label": "summarization",
+        "input_tokens": 74,
+        "output_tokens": 39
+      }
+    ]
+  }
+}

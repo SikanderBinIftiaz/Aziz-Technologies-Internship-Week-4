@@ -1,0 +1,63 @@
+{
+  "hub_available_in_this_run": false,
+  "classification": {
+    "source": "OFFLINE FALLBACK (keyword heuristic \u2014 not a real Transformer model)",
+    "results": [
+      {
+        "text": "The drone's battery life exceeded every test we ran this week.",
+        "prediction": {
+          "label": "POSITIVE",
+          "score": 0.75
+        }
+      },
+      {
+        "text": "The deployment kept crashing and support never responded.",
+        "prediction": {
+          "label": "NEGATIVE",
+          "score": 0.75
+        }
+      },
+      {
+        "text": "It's an average product, does the job, nothing special.",
+        "prediction": {
+          "label": "NEUTRAL",
+          "score": 0.5
+        }
+      }
+    ]
+  },
+  "generation": {
+    "source": "OFFLINE FALLBACK (no real generation performed)",
+    "prompt": "Disaster response drones can",
+    "generated_text": "Disaster response drones can [OFFLINE FALLBACK \u2014 no model download available in this sandbox; on a machine with internet access this pipeline call would return real distilgpt2-generated continuation text here.]"
+  },
+  "embeddings_demo": {
+    "docs": [
+      "The drone surveyed the flooded area.",
+      "The UAV scanned the flooded zone.",
+      "The chef prepared a three-course meal."
+    ],
+    "similarity_matrix": [
+      [
+        1.0,
+        0.39682840416150134,
+        0.13526053291856674
+      ],
+      [
+        0.39682840416150134,
+        1.0000000000000002,
+        0.13526053291856677
+      ],
+      [
+        0.13526053291856674,
+        0.13526053291856677,
+        1.0000000000000002
+      ]
+    ]
+  },
+  "deployment_notes": {
+    "local_vs_api_inference": "Local inference (loading weights with `transformers` and running on your own machine) avoids per-request API costs and network latency, and keeps data on-device \u2014 but you pay for compute, storage, and maintenance yourself. API-based inference (calling a hosted model) trades that for simplicity, elastic scaling, and access to much larger models than most local hardware can run.",
+    "model_selection": "Pick the smallest model that meets the accuracy bar for the task. distilbert/distilgpt2-class models are fast and cheap for prototyping; move to larger models only if evaluation shows the smaller one underperforms on your actual data.",
+    "gpu_cpu_considerations": "CPU inference works fine for small models and low request volume (as used in this script). GPU inference becomes worthwhile once you're running larger models, batching many requests, or need low per-request latency at scale."
+  }
+}
